@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Reviews</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="background-color: #fff1e0 !important">
+  <h1
+    style="font-family: 'Merriweather' !important; display: block; background-color: black; color: white; font-family: 'Pacifico'; text-align: center; padding: 1em">
+    AROUND THE WORLD</h1>
+  <button
+    style="font-family: 'Merriweather'; position: absolute; margin-top: -5.5em; margin-left: 3em; background-color: black; color: white; padding: 0.5em 2em; border-radius: 0.5em">Home</button>
+  <button
+    style="font-family: 'Merriweather'; position: absolute; margin-top: -5.5em; margin-left: 14em; background-color: black; color: white; padding: 0.5em 2em; border-radius: 0.5em">Tours</button>
+  <button
+    style="font-family: 'Merriweather'; position: absolute; margin-top: -5.5em; margin-left: 79em; background-color: black; color: white; padding: 0.5em 2em; border-radius: 0.5em">FAQ</button>
+  <div id="reviews"></div>
+  <form style="position: absolute; margin-left: 40em; margin-top: -130em; width: 45%" name="ccform"
+    action="https://www.usaepay.com/gate.php" method="POST" onSubmit="return validateForm()">
+    <input type="hidden" name="UMkey" value="PUT_YOUR_SOURCE_KEY_HERE">
+    <input type="hidden" name="UMredir" value="">
+    <table border=1 width="80%">
+      <tr>
+        <td colspan=2 align="center">Credit Card Info (If payment by CC)</td>
+      </tr>
+      <tr>
+        <td>Card Number</td>
+        <td><input type="text" name="UMcard" size="12"></td>
+      </tr>
+      <tr>
+        <td>Expire Date (MM/YY)</td>
+        <td><input type="text" name="UMexpirM" size="2" maxlength="2">/
+          <input type="text" name="UMexpirY" size="2" maxlength="2">
+          <input type="hidden" name="UMexpir" value="">
+        </td>
+      </tr>
+      <tr>
+        <td colspan=2 align="center">Check Info (If payment by check)</td>
+      </tr>
+      <tr>
+        <td>Bank Routing number</td>
+        <td><input type="text" name="UMrouting" size="12"></td>
+      </tr>
+      <tr>
+        <td>Checking Account Number</td>
+        <td><input type="text" name="UMaccount" size="12"></td>
+      </tr>
+      <tr>
+        <td>social security number</td>
+        <td><input type="text" name="UMssn" size="12"></td>
+      </tr>
+      <tr>
+        <td>Drivers license number</td>
+        <td><input type="text" name="UMdlnum" size="12"></td>
+      </tr>
+      <tr>
+        <td>State that the drivers license was issued</td>
+        <td><input type="text" name="UMdlstate" size="12"></td>
+      </tr>
+      <tr>
+        <td colspan=2 align="center">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Amount</td>
+        <td>$<input type="text" name="UMamount" size="6"></td>
+      </tr>
+      <tr>
+        <td>Invoice Number</td>
+        <td><input type="text" name="UMinvoice" size="12"></td>
+      </tr>
+      <tr>
+        <td>Customer Name</td>
+        <td><input type="text" name="UMname" size="20"></td>
+      </tr>
+      <tr>
+        <td>Street</td>
+        <td><input type="text" name="UMstreet" size="20"></td>
+      </tr>
+      <tr>
+        <td>Zip</td>
+        <td><input type="text" name="UMzip" size="5" maxlength="5"></td>
+      </tr>
+      <tr>
+        <td align="center"><input type="submit" name="submit" value="Submit"></td>
+        <td align="center"><input type="reset" name="reset" value="reset"></td>
+      </tr>
+    </table>
+  </form>
+  <script src="bundle.js"></script>
+</body>
+
+</html>

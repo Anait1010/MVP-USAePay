@@ -1,0 +1,54 @@
+{
+  "name": "reviews-service",
+  "version": "",
+  "description": "",
+  "author": "Jamal",
+  "license": "",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "build": "webpack -d --watch",
+    "seed": "node db/fakeData.js",
+    "test": "jest --coverage",
+    "start": "nodemon server/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.4.19",
+    "node-fetch": "^2.3.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-star-rating-component": "^1.4.1",
+    "reactjs-popup": "^1.4.1",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.5.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-styled-components": "^1.10.0",
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "fetch-mock": "^7.3.1",
+    "jest": "^24.5.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
