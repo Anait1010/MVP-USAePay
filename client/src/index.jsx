@@ -6,5 +6,5 @@ const App = () => (
 
 ReactDOM.render(
   <App />,
-  document.getElementById('reviews'),
+  document.getElementById('travel'),
 );

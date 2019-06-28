@@ -46,19 +46,6 @@ export const StarRating = styled(StarRatingComponent)`
   margin-left: 1em;
 `;
 
-// const ReviewDate = styled.a`
-//   float: right;
-//   color: #bbb;
-// `;
-
-// export const ReviewDescription = styled.div`
-//   font-family: "Merriweather", "Georgia", serif;
-//   margin-top: 0.5em;
-//   margin-bottom: 0.625em;
-//   line-height: 1.5em;
-//   color: #181818;
-// `;
-
 const ReviewFooter = styled.div`
 `;
 
@@ -67,16 +54,6 @@ const Likes = styled.a`
   margin-right: 1.1em;
 `;
 
-// const Button = styled.button`
-//   font-size: 0.688em;
-//   color: #333;
-//   padding: 4px 12px;
-//   border-radius: 3px;
-//   border: 1px solid #D6D0C4;
-//   cursor: pointer;
-//   background-color: #F4F1EA;
-//   line-height: 1;
-// `;
 const Buybutton = styled.button`
   font-size: 0.688em;
   color: #333;
@@ -109,24 +86,6 @@ class ReviewComponent extends React.Component {
       likedStatus,
     };
 
-    // fetch('http://localhost:3003/review', {
-    //   method: 'PATCH',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(reviewInfos),
-    // })
-    //   .then(response => response.json())
-    //   .then((updatedReview) => {
-    //     this.setState(() => (
-    //       {
-    //         likesCount: updatedReview.likes_count,
-    //       }
-    //     ));
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
 
     this.setState((prevState) => {
       if (prevState.likedStatus === 'like') {
@@ -160,11 +119,7 @@ class ReviewComponent extends React.Component {
             </Reviewer> <br />
             {' Rating '}
             <StarRating name="review_rate" value={review.star_rate} starColor="#f65" emptyStarColor="#ddd" editing={false} />
-            {/* <ReviewDate>{review.review_date}</ReviewDate> */}
           </ReviewHeader>
-          {/* <ReviewDescription>
-            {review.review_description}
-          </ReviewDescription> */}
           <ReviewFooter>
             <Likes>
               <span className="likes_count">
@@ -172,7 +127,6 @@ class ReviewComponent extends React.Component {
               </span>
               {' likes'}
             </Likes>
-            {/* <Button type="submit" onClick={() => { this.like(); }}>{ likedStatus }</Button> */}
             <Buybutton type="submit" onClick={e => this.handleClick(e)}> Buy </Buybutton>
           </ReviewFooter>
         </Review>
@@ -186,10 +140,7 @@ ReviewComponent.propTypes = {
     _id: PropTypes.string,
     id: PropTypes.number,
     image_url: PropTypes.string,
-    // reviewer_name: PropTypes.string,
     star_rate: PropTypes.number,
-    // review_date: PropTypes.string,
-    // review_description: PropTypes.string,
     likes_count: PropTypes.number,
   }).isRequired,
 };
