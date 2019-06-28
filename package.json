@@ -1,8 +1,8 @@
 {
-  "name": "reviews-service",
+  "name": "travel",
   "version": "",
   "description": "",
-  "author": "Jamal",
+  "author": "Anait",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
@@ -10,7 +10,6 @@
   "scripts": {
     "build": "webpack -d --watch",
     "seed": "node db/fakeData.js",
-    "test": "jest --coverage",
     "start": "nodemon server/index.js"
   },
   "dependencies": {
