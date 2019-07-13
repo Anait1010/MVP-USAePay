@@ -23,8 +23,11 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-payment": "^0.1.8",
     "react-star-rating-component": "^1.4.1",
     "reactjs-popup": "^1.4.1",
+    "request": "^2.88.0",
+    "sha256": "^0.2.0",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {

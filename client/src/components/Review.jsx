@@ -1,5 +1,6 @@
 import { PropTypes } from 'prop-types';
 import StarRatingComponent from 'react-star-rating-component';
+// import CardForm from './PaymentForm';
 
 
 const ReviewWrapper = styled.div`
@@ -55,13 +56,13 @@ const Likes = styled.a`
 `;
 
 const Buybutton = styled.button`
-  font-size: 0.688em;
-  color: #333;
+  font-size: 0.9em;
+  color: white;
   padding: 5px 23px;
   border-radius: 3px;
-  border: 1px solid black;
+  border: 1px solid white;
   cursor: pointer;
-  background-color: #F4F1EA;
+  background-color: black;
   line-height: 1.5;
 `;
 
@@ -121,13 +122,14 @@ class ReviewComponent extends React.Component {
             <StarRating name="review_rate" value={review.star_rate} starColor="#f65" emptyStarColor="#ddd" editing={false} />
           </ReviewHeader>
           <ReviewFooter>
-            <Likes>
+            {/* <Likes>
               <span className="likes_count">
                 {likesCount}
               </span>
               {' likes'}
-            </Likes>
+            </Likes> */}
             <Buybutton type="submit" onClick={e => this.handleClick(e)}> Buy </Buybutton>
+            {/* <CardForm> </CardForm> */}
           </ReviewFooter>
         </Review>
       </ReviewWrapper>

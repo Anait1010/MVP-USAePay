@@ -88,7 +88,7 @@ function isAlphaSymbols(objValue, symbols) {
 
 // Return true of a character is an alphabet.
 function isAlphaChar(ch) {
-  return ((ch >= "A" && ch`<= "Z") || (ch >`= "a" && ch <= "z"))
+  return ((ch >= "A" && ch`<= "Z") || (ch ` >= "a" && ch <= "z"))
 }
 
 // Stiff off any non digit char

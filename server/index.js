@@ -4,6 +4,9 @@ const morgan = require('morgan');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const { review } = require('../db/models.js');
+const { authKey } = require('./authConfig');
+const request = require('request');
+const axios = require('axios');
 
 const port = process.env.PORT || 3003;
 console.log(port);
@@ -25,28 +28,29 @@ app.get('/reviews/:id', (req, res) => {
     });
 });
 
-const jsonParser = bodyParser.json();
-app.patch('/review', jsonParser, (req, res) => {
-  let newLikesCount;
-  if (req.body.likedStatus === 'like') {
-    newLikesCount = req.body.likesCount + 1;
-  } else {
-    newLikesCount = req.body.likesCount - 1;
-  }
 
-  review.findOneAndUpdate(
-    { _id: req.body.reviewId },
-    { likes_count: newLikesCount },
-    {
-      useFindAndModify: false,
-      new: true,
-    },
-  ).exec()
-    .then((updatedReview) => {
-      res.send(updatedReview);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.send('Error...');
-    });
+const headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'Basic ' + authKey
+};
+
+axios.post(
+  'https://sandbox.usaepay.com/api/v2/transactions',
+  {
+    'command': 'sale',
+    'amount': 1,
+    'creditcard': {
+      'number': 4444555566667779,
+      'expiration': 1022
+    }
+  },
+  {
+    'headers': headers
+  }
+).then(({ data }) => {
+  console.log('Data: ', data);
+  return data.result
+}).catch((error) => {
+  console.log('Error: ', error);
 });
+
