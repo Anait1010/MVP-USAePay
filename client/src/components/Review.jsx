@@ -1,6 +1,5 @@
 import { PropTypes } from 'prop-types';
 import StarRatingComponent from 'react-star-rating-component';
-// import CardForm from './PaymentForm';
 
 
 const ReviewWrapper = styled.div`
@@ -56,6 +55,16 @@ const Likes = styled.a`
 `;
 
 const Buybutton = styled.button`
+  font-size: 0.9em;
+  color: white;
+  padding: 5px 23px;
+  border-radius: 3px;
+  border: 1px solid white;
+  cursor: pointer;
+  background-color: black;
+  line-height: 1.5;
+`;
+const Pricebutton = styled.button`
   font-size: 0.9em;
   color: white;
   padding: 5px 23px;
@@ -129,6 +138,7 @@ class ReviewComponent extends React.Component {
               {' likes'}
             </Likes> */}
             <Buybutton type="submit" onClick={e => this.handleClick(e)}> Buy </Buybutton>
+            <Pricebutton> $899.99 </Pricebutton>
             {/* <CardForm> </CardForm> */}
           </ReviewFooter>
         </Review>
