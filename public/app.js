@@ -14,7 +14,7 @@ $("#form").on("submit", event => {
     street: form.street.value.toString(),
     zip: form.zip.value.toString()
   };
-  let price = "899.99";
+  let price = "899";
 
   let post = {
     method: "POST",
@@ -41,7 +41,7 @@ $("#form").on("submit", event => {
       } else {
         let charged = `Your Credit Card ending ${cardInfo.number.slice(
           -4
-        )} was charged $899.99. Enjoy your trip!`;
+        )} was charged $899. Enjoy your trip!`;
         $(".card-info ").addClass("hide");
         $(".final").removeClass("hide");
         $(".enjoy").text(charged);

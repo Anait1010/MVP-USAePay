@@ -13,8 +13,8 @@ const ReviewWrapper = styled.div`
 `;
 
 const Img = styled.img`
-  max-width: 30%;
-  hight: 20%;
+  max-width: 25%;
+  hight: 15%;
   margin-right: 0.625em;
   cursor: pointer;
   border: solid 0.1em black;

@@ -19,8 +19,8 @@ const reviewSchema = new mongoose.Schema({
   review_description: String,
   likes_count: Number,
 }, {
-  versionKey: false,
-});
+    versionKey: false,
+  });
 
 const review = mongoose.model('review', reviewSchema);
 

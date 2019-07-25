@@ -19,17 +19,15 @@
     }
 
     #form {
-      margin-top: -560em;
-      margin-left: 50em;
-    }
-
-    .booked {
-      margin-top: -430em !important;
-      margin-left: 40em;
+      display: block;
+      position: absolute;
+      margin-top: -800px;
+      margin-left: 800px;
     }
 
     .enjoy {
-      margin-left: 50em;
+      margin-top: -700px !important;
+      margin-left: 600px;
     }
   </style>
 
@@ -46,45 +44,42 @@
   <button
     style="font-family: 'Merriweather'; position: absolute; margin-top: -5.5em; margin-left: 79em; background-color: black; color: white; padding: 0.5em 2em; border-radius: 0.5em">FAQ</button>
   <div id="travel"></div>
-  <div class="container">
-    <section class="card-info  hide">
-      <form role="form" id="form" class="form">
-        <div>
-          <label>Name</label> <br>
-          <input type="text" id="name" name="name" placeholder="First and Last Name" autofocus>
-        </div>
-        <div>
-          <label>Card Number</label> <br>
-          <input type="number" id="card-number" name="number" placeholder="Credit Card number">
-        </div>
-        <div>
-          <label>Expiration Date</label> <br>
-          <input type="text" id="exp" name="expiration" placeholder="MMYY">
-        </div>
-        <div>
-          <label>CVC</label> <br>
-          <input type="number" id="cvc" name="cvc">
-        </div>
-        <div>
-          <label>Price</label> <br>
-          <input type="text" id="price" name="price" placeholder="$899.99">
-        </div>
-        <div>
-          <label>Address</label> <br>
-          <input type="text" id="address" name="street">
-        </div>
-        <div>
-          <label>Zip Code</label> <br>
-          <input type="number" id="zip" name="zip">
-        </div> <br>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-    <section class="final hide">
-      <h3 class="booked">Your tour is now paid and booked! </h3>
-      <h5 class="enjoy"></h5>
-    </section>
-  </div>
+  <section class="card-info  hide">
+    <form role="form" id="form" class="form">
+      <div>
+        <label>Name</label> <br>
+        <input type="text" id="name" name="name" placeholder="First and Last Name" autofocus>
+      </div>
+      <div>
+        <label>Card Number</label> <br>
+        <input type="number" id="card-number" name="number" placeholder="Credit Card number">
+      </div>
+      <div>
+        <label>Expiration Date</label> <br>
+        <input type="text" id="exp" name="expiration" placeholder="MMYY">
+      </div>
+      <div>
+        <label>CVC</label> <br>
+        <input type="number" id="cvc" name="cvc">
+      </div>
+      <div>
+        <label>Price</label> <br>
+        <input type="text" id="price" name="price" placeholder="$899">
+      </div>
+      <div>
+        <label>Address</label> <br>
+        <input type="text" id="address" name="street">
+      </div>
+      <div>
+        <label>Zip Code</label> <br>
+        <input type="number" id="zip" name="zip">
+      </div> <br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  <section class="final hide">
+    <h3 class="enjoy"></h3>
+  </section>
   <script src="app.js" type="application/javascript"></script>
   <script src="bundle.js"></script>
 </body>
